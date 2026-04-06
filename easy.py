@@ -151,3 +151,28 @@ if len(current)>len(longest):
     longest=current
 print(longest)
 
+Rats AND Food Distribution
+def Rats_FoodDistribution(r, unit, arr):
+    req=r*unit
+    if req*unit==0:
+        return 0
+    tot=0
+    for i in range(len(arr)):
+        tot+=arr[i]
+        if tot>=req:
+            return i+1
+    return -1
+
+CHECK ARMSTRONG
+def check_armstrong(num):
+    if num<0:
+        return None
+    ans=0
+    l=len(str(num))
+    for ch in str(num):
+        ans+=int(ch)**l
+    if int(num)==ans:
+        return True
+    else:
+        return False
+
