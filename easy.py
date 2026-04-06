@@ -62,7 +62,7 @@ for i in accounts:
     maxx_wealth=max(wealth,maxx_wealth)
 print(maxx_wealth)
  
-Perfect Number
+PERFECT NUMBER
 n=6
 if n<1:
      print(False)
