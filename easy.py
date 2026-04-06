@@ -92,3 +92,62 @@ for i in d2:
      else:
          res[i]=d2[i]
 print(res)
+
+ELECTRIC SLAB LOGIC
+n=int(input())
+if n<101:
+    print("free")
+elif n>100 and n<301:
+    print((n-100)*5)
+elif n>300:
+    print((200*5)+(n-300)*10)
+else:
+    print("Invalid")
+
+Sum of Digits of a Number
+def sumOfDigits(n):
+    if n<=0:
+        return 0
+    summ=0
+    for digit in str(n):
+        summ+=int(digit)
+    return summ
+
+
+ANTI DIAGONAL ELEMENTS
+mat=[[1, 2,2], [3, 4,4],[9,0,1]]
+n=len(mat)
+ans=[]
+for i in range(n):
+    j=n-1-i
+    ans.append(mat[i][j])
+print(ans)
+
+LONGEST WORD COUNT IN A SEQUENCE
+s="I love competitive programming"
+lon=float("-inf")
+c=0
+for ch in s:
+    if ch!=" ":
+        c+=1
+    else:
+        lon=max(lon,c)
+        c=0
+lon=max(lon,c)
+print(lon)
+
+LONGEST WORD IN A SEQUENCE
+s="I love competitive programming"
+longest=""
+current=""
+for ch in s:
+    if ch!=" ":
+        current+=ch
+    else:
+        if len(current)>len(longest):
+            longest=current
+        current=""
+if len(current)>len(longest):
+    longest=current
+print(longest)
+
